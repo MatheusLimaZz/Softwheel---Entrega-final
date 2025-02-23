@@ -1,0 +1,208 @@
+[gd_scene load_steps=11 format=3 uid="uid://b7qh7ge5ups15"]
+
+[ext_resource type="Script" path="res://spin_wheel.gd" id="1_6idgn"]
+[ext_resource type="Texture2D" uid="uid://chhiay8he1qmx" path="res://addons/spin_wheel_background.png" id="1_oa5dk"]
+[ext_resource type="Texture2D" uid="uid://b4h1kllvusahk" path="res://addons/spin_wheel_front_empty.png" id="2_lc6tb"]
+[ext_resource type="Texture2D" uid="uid://cw5ge5754xnjg" path="res://addons/spin_wheel_button.png" id="3_mn6ji"]
+[ext_resource type="Texture2D" uid="uid://dv2cdmera473o" path="res://addons/spin_wheel_button_ring.png" id="3_pyee7"]
+[ext_resource type="Texture2D" uid="uid://dj3xq2vcm2an3" path="res://addons/spin_wheel_button_press.png" id="4_kji33"]
+[ext_resource type="Texture2D" uid="uid://bpkguynm07cc2" path="res://addons/spin_wheel_arrow.png" id="6_qkq31"]
+
+[sub_resource type="FontFile" id="FontFile_dy6oq"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dqts5"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ksfoc"]
+font_size = 25
+font_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="spin_wheel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6idgn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1374.0
+offset_bottom = 768.0
+
+[node name="GameOverLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.187
+anchor_right = 0.495
+anchor_bottom = 0.187
+offset_left = -176.13
+offset_top = -87.616
+offset_right = 287.87
+offset_bottom = 104.384
+theme_override_colors/default_color = Color(0.917647, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_dy6oq")
+theme_override_font_sizes/normal_font_size = 60
+text = "GAME OVER
+  YOU LOSE"
+
+[node name="QuestionPanel" type="Panel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 120.0
+offset_right = 1797.0
+offset_bottom = 815.0
+scale = Vector2(0.560004, 0.84)
+
+[node name="QuestionLabel" type="Label" parent="ColorRect/QuestionPanel"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 38.0
+offset_right = 929.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+
+[node name="Option1" type="Button" parent="ColorRect/QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = -42.7152
+offset_top = 132.857
+offset_right = 720.285
+offset_bottom = 220.857
+
+[node name="Option2" type="Button" parent="ColorRect/QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = -42.7152
+offset_top = 247.143
+offset_right = 720.285
+offset_bottom = 343.143
+
+[node name="Option3" type="Button" parent="ColorRect/QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = -42.7152
+offset_top = 370.952
+offset_right = 718.285
+offset_bottom = 474.952
+
+[node name="Option4" type="Button" parent="ColorRect/QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = -42.7152
+offset_top = 494.762
+offset_right = 718.285
+offset_bottom = 598.762
+
+[node name="SkipButton" type="Button" parent="ColorRect/QuestionPanel"]
+layout_mode = 0
+offset_left = -314.0
+offset_top = 629.0
+offset_right = -43.0
+offset_bottom = 695.0
+text = "skip question
+"
+
+[node name="back" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 192.0
+offset_right = 987.0
+offset_bottom = 1092.0
+scale = Vector2(0.561928, 0.484325)
+texture = ExtResource("1_oa5dk")
+
+[node name="front" type="TextureRect" parent="ColorRect/back"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -1.14441e-05
+offset_right = 900.0
+offset_bottom = 900.0
+scale = Vector2(0.942362, 0.914836)
+pivot_offset = Vector2(450, 450)
+texture = ExtResource("2_lc6tb")
+
+[node name="back_button" type="TextureRect" parent="ColorRect/back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.701
+offset_top = -101.882
+offset_right = 99.2986
+offset_bottom = 98.1182
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pyee7")
+
+[node name="btn_spin" type="TextureButton" parent="ColorRect/back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.701
+offset_top = -101.882
+offset_right = 99.2986
+offset_bottom = 98.1182
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 0.84)
+pivot_offset = Vector2(100, 100)
+texture_normal = ExtResource("3_mn6ji")
+texture_pressed = ExtResource("4_kji33")
+stretch_mode = 3
+
+[node name="flecha" type="TextureRect" parent="ColorRect/back"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.201
+offset_top = 16.5178
+offset_right = 98.7994
+offset_bottom = 197.518
+grow_horizontal = 2
+scale = Vector2(0.652667, 0.588119)
+pivot_offset = Vector2(100, -0.0688705)
+texture = ExtResource("6_qkq31")
+
+[node name="FeedbackPopup" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78
+anchor_top = 0.089
+anchor_right = 0.78
+anchor_bottom = 0.089
+offset_left = -111.72
+offset_top = -36.352
+offset_right = 115.28
+offset_bottom = 35.648
+theme_override_font_sizes/font_size = 40
+label_settings = SubResource("LabelSettings_dqts5")
+
+[node name="ScoreLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 712.0
+offset_right = 1056.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_ksfoc")
+
+[connection signal="pressed" from="ColorRect/back/btn_spin" to="." method="_on_btn_spin_pressed"]

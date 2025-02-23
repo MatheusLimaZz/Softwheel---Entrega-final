@@ -1,0 +1,132 @@
+[gd_scene load_steps=6 format=3 uid="uid://4upvx00wjhgc"]
+
+[ext_resource type="Script" path="res://color_rect_escolher_tema.gd" id="1_dnc14"]
+
+[sub_resource type="Theme" id="Theme_fle81"]
+default_font_size = 22
+
+[sub_resource type="GDScript" id="GDScript_4yxlt"]
+
+[sub_resource type="GDScript" id="GDScript_0regw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nttyu"]
+font_size = 30
+font_color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+script = SubResource("GDScript_0regw")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectEscolherTema" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dnc14")
+
+[node name="levantamentoRodaButton" type="Button" parent="ColorRectEscolherTema"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.448
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -206.616
+offset_right = 179.0
+offset_bottom = -171.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fle81")
+text = "LEVANTAMENTO DE REQUISITOS"
+script = SubResource("GDScript_4yxlt")
+
+[node name="testesSoftwareButton" type="Button" parent="ColorRectEscolherTema"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.453
+anchor_right = 0.5
+anchor_bottom = 0.453
+offset_left = -171.0
+offset_top = -111.451
+offset_right = 180.0
+offset_bottom = -36.451
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fle81")
+text = "TESTES DE SOFTWARE
+"
+script = SubResource("GDScript_4yxlt")
+
+[node name="desenvolvimentoAgilButton" type="Button" parent="ColorRectEscolherTema"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -43.5
+offset_right = 182.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fle81")
+text = "DESENVOLVIMENTO AGIL
+
+"
+script = SubResource("GDScript_4yxlt")
+
+[node name="VoltarButton" type="Button" parent="ColorRectEscolherTema"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = 58.5
+offset_right = 182.0
+offset_bottom = 133.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fle81")
+text = "Voltar
+
+"
+script = SubResource("GDScript_4yxlt")
+
+[node name="LabelTema" type="Label" parent="ColorRectEscolherTema"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 14.0
+offset_right = 263.0
+offset_bottom = 146.0
+grow_horizontal = 2
+text = "ESCOLHA UM TEMA
+"
+label_settings = SubResource("LabelSettings_nttyu")
+horizontal_alignment = 1
+vertical_alignment = 1

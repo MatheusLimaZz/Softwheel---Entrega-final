@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://w1qd01abaobx"]
+
+[ext_resource type="Script" path="res://color_rect_j_2.gd" id="1_xi3kq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gj3d"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_or4d4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_86mkf"]
+font_size = 26
+font_color = Color(0.808992, 0, 0.178461, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectJ2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1358.0
+offset_bottom = 767.0
+script = ExtResource("1_xi3kq")
+
+[node name="perg1" type="Label" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 266.0
+offset_right = 1047.0
+offset_bottom = 360.0
+text = "Jogador 1:"
+label_settings = SubResource("LabelSettings_5gj3d")
+
+[node name="perg2" type="Label" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 397.0
+offset_right = 1045.0
+offset_bottom = 491.0
+text = "Jogador 2:"
+label_settings = SubResource("LabelSettings_5gj3d")
+
+[node name="Button_voltar" type="Button" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 680.0
+offset_right = 158.0
+offset_bottom = 754.0
+text = "Voltar"
+
+[node name="NameInput" type="LineEdit" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 264.0
+offset_right = 913.0
+offset_bottom = 312.0
+
+[node name="NameInput2" type="LineEdit" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 397.0
+offset_right = 914.0
+offset_bottom = 445.0
+
+[node name="ConfirmButton" type="Button" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 337.0
+offset_right = 906.0
+offset_bottom = 375.0
+theme = SubResource("Theme_or4d4")
+text = "save"
+
+[node name="ConfirmButton2" type="Button" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 470.0
+offset_right = 911.0
+offset_bottom = 508.0
+theme = SubResource("Theme_or4d4")
+text = "save"
+
+[node name="Button_play" type="Button" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 1193.0
+offset_top = 678.0
+offset_right = 1347.0
+offset_bottom = 749.0
+text = "Jogar"
+
+[node name="LabelMensagem" type="Label" parent="ColorRectJ2"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 483.0
+offset_right = 1145.0
+offset_bottom = 550.0
+label_settings = SubResource("LabelSettings_86mkf")

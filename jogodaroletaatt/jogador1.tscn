@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch0l6r0g82rrh"]
+
+[ext_resource type="Script" path="res://color_rect_jogador_1.gd" id="1_n1jyx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1535"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_htaw2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgb1r"]
+font_size = 26
+font_color = Color(0.808992, 0, 0.178461, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectJogador1" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n1jyx")
+
+[node name="perg1" type="Label" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 310.0
+offset_right = 1034.0
+offset_bottom = 404.0
+text = "Jogador 1:"
+label_settings = SubResource("LabelSettings_w1535")
+
+[node name="Button_voltar" type="Button" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 684.0
+offset_right = 155.0
+offset_bottom = 758.0
+text = "Voltar"
+
+[node name="NameInput" type="LineEdit" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 312.0
+offset_right = 896.0
+offset_bottom = 360.0
+
+[node name="ConfirmButton" type="Button" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 376.0
+offset_right = 897.0
+offset_bottom = 414.0
+theme = SubResource("Theme_htaw2")
+text = "save"
+
+[node name="Button_play" type="Button" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 1202.0
+offset_top = 689.0
+offset_right = 1356.0
+offset_bottom = 760.0
+text = "Jogar"
+
+[node name="LabelMensagem" type="Label" parent="ColorRectJogador1"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 483.0
+offset_right = 1145.0
+offset_bottom = 550.0
+label_settings = SubResource("LabelSettings_hgb1r")

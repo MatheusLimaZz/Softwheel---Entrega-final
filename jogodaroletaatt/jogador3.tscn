@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6wdjtwtqvclr"]
+
+[ext_resource type="Script" path="res://color_rect.gd" id="1_8awdd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0vowd"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_dq7mw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s4pxc"]
+font_size = 26
+font_color = Color(0.808992, 0, 0.178461, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1361.0
+offset_bottom = 761.0
+script = ExtResource("1_8awdd")
+
+[node name="perg1" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 158.0
+offset_right = 1012.0
+offset_bottom = 252.0
+text = "Jogador 1:"
+label_settings = SubResource("LabelSettings_0vowd")
+
+[node name="perg2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 290.0
+offset_right = 1016.0
+offset_bottom = 384.0
+text = "Jogador 2:"
+label_settings = SubResource("LabelSettings_0vowd")
+
+[node name="perg3" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 420.0
+offset_right = 1022.0
+offset_bottom = 514.0
+text = "Jogador 3:"
+label_settings = SubResource("LabelSettings_0vowd")
+
+[node name="Button_voltar" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 664.0
+offset_right = 157.0
+offset_bottom = 738.0
+text = "Voltar"
+
+[node name="NameInput" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 156.0
+offset_right = 884.0
+offset_bottom = 204.0
+
+[node name="NameInput2" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 288.0
+offset_right = 882.0
+offset_bottom = 336.0
+
+[node name="NameInput3" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 422.0
+offset_right = 889.0
+offset_bottom = 470.0
+
+[node name="ConfirmButton" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 230.0
+offset_right = 873.0
+offset_bottom = 268.0
+theme = SubResource("Theme_dq7mw")
+text = "save"
+
+[node name="ConfirmButton2" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 361.0
+offset_right = 885.0
+offset_bottom = 399.0
+theme = SubResource("Theme_dq7mw")
+text = "save"
+
+[node name="ConfirmButton3" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 491.0
+offset_right = 890.0
+offset_bottom = 529.0
+theme = SubResource("Theme_dq7mw")
+text = "save"
+
+[node name="Button_play" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1196.0
+offset_top = 671.0
+offset_right = 1350.0
+offset_bottom = 742.0
+text = "Jogar"
+
+[node name="LabelMensagem" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 483.0
+offset_right = 1145.0
+offset_bottom = 550.0
+label_settings = SubResource("LabelSettings_s4pxc")

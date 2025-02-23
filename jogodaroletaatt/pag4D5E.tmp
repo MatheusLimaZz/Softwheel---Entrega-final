@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1d1kmsvqr4uj"]
+
+[ext_resource type="Script" path="res://color_rect.gd" id="1_mccud"]
+[ext_resource type="Script" path="res://Regras_button.gd" id="2_gp2im"]
+
+[sub_resource type="GDScript" id="GDScript_arkwt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pebrj"]
+font_size = 30
+font_color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+script = SubResource("GDScript_arkwt")
+
+[sub_resource type="Theme" id="Theme_antws"]
+default_font_size = 22
+
+[sub_resource type="GDScript" id="GDScript_py24o"]
+
+[sub_resource type="Theme" id="Theme_csh02"]
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_n7nmk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+script = ExtResource("1_mccud")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.5
+offset_right = 263.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "ROLETA DO ISMAYLE
+"
+label_settings = SubResource("LabelSettings_pebrj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JogarButton" type="Button" parent="ColorRect"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.5
+offset_top = 180.0
+offset_right = 103.5
+offset_bottom = 255.0
+grow_horizontal = 2
+theme = SubResource("Theme_antws")
+text = "JOGAR"
+script = SubResource("GDScript_py24o")
+
+[node name="sairButton" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = 65.0
+offset_right = 105.5
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_csh02")
+text = "SAIR"
+
+[node name="RegrasButton" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.927
+anchor_top = 0.073
+anchor_right = 0.927
+anchor_bottom = 0.073
+offset_left = -591.831
+offset_top = 241.55
+offset_right = -386.831
+offset_bottom = 313.55
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_csh02")
+text = "REGRAS"
+script = ExtResource("2_gp2im")
+
+[node name="soundButton" type="CheckButton" parent="ColorRect"]
+layout_mode = 1
+offset_right = 65.0
+offset_bottom = 40.0
+theme = SubResource("Theme_n7nmk")

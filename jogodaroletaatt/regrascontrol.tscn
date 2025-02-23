@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://dikdi56fjgy26"]
+
+[ext_resource type="Script" path="res://color_rect_regras.gd" id="1_x3txj"]
+[ext_resource type="Script" path="res://Jogar_button.gd" id="2_rpu6e"]
+
+[sub_resource type="GDScript" id="GDScript_eexqx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vbwxg"]
+font_size = 30
+font_color = Color(0.0923969, 0.0923971, 0.092397, 1)
+script = SubResource("GDScript_eexqx")
+
+[sub_resource type="Theme" id="Theme_24ogh"]
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_2udxp"]
+default_font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_skkiv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectRegras" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1366.0
+offset_bottom = 767.0
+script = ExtResource("1_x3txj")
+
+[node name="RegrasCabecalho" type="Label" parent="ColorRectRegras"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.5
+offset_right = 263.5
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "Regras do jogo
+"
+label_settings = SubResource("LabelSettings_vbwxg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jogarButton" type="Button" parent="ColorRectRegras"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 467.0
+offset_top = 691.0
+offset_right = 666.0
+offset_bottom = 743.0
+grow_horizontal = 2
+theme = SubResource("Theme_24ogh")
+text = "JOGAR"
+script = ExtResource("2_rpu6e")
+
+[node name="VoltarButton" type="Button" parent="ColorRectRegras"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -664.0
+offset_top = 306.5
+offset_right = -462.0
+offset_bottom = 365.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2udxp")
+text = "VOLTAR"
+
+[node name="ColorRectRegras" type="ColorRect" parent="ColorRectRegras"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.5
+offset_top = -234.0
+offset_right = 319.5
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0687983, 0.0687983, 0.0687983, 1)
+
+[node name="RegrasLabel" type="Label" parent="ColorRectRegras/ColorRectRegras"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 21.0
+offset_right = 663.0
+offset_bottom = 397.0
+text = "Bem vindo(a) e obrigado por jogar o Softwheel, o nosso quiz sobre temas da área 
+de engenharia de software. O nosso objetivo é que com nossos quizzes seja possível
+revisar e desafiar seus conhecimentos nos subtemas da engenharia de software. 
+
+O jogo funciona da seguinte forma: toda rodada você terá que girar a roleta para 
+definir o nível de dificuldade da pergunta, entre fácil, médio ou difícil.  As questões 
+fáceis valem 50 pontos, as médias valem 100 e as difíceis valem 200.
+
+Você ganha o jogo caso seus pontos cheguem a 1000, mas tome cuidado: ao errar 
+uma questão, você perderá pontos igual a metade do que você ganharia caso acer-
+tasse a questão. Exemplo: errar uma questão média faz você perder 50 pontos.
+
+Dito isso, você pode pular a questão. Mas ao pular ou responder uma questão corre-
+tamente, ela não aparecerá mais durante a partida. E se por acaso não restarem 
+mais perguntas, que são 30 no total, você perderá o jogo. 
+
+
+
+"
+label_settings = SubResource("LabelSettings_skkiv")

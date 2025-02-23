@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b335v65w6po0o"]
+
+[ext_resource type="Script" path="res://roda.gd" id="1_allmj"]
+[ext_resource type="Texture2D" uid="uid://clge4mn1vg5mv" path="res://imagem/png-clipart-casino-roulette-casino-roulette-thumbnail.png" id="2_tqvrc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1147.0
+offset_bottom = 642.0
+script = ExtResource("1_allmj")
+
+[node name="Timer" type="Timer" parent="ColorRect"]
+
+[node name="ButtonAtivarRoleta" type="Button" parent="ColorRect"]
+layout_mode = 1
+offset_left = 449.0
+offset_top = 478.0
+offset_right = 642.0
+offset_bottom = 557.0
+pivot_offset = Vector2(0.5, 1)
+text = "GIRAR
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(368, 119)
+texture = ExtResource("2_tqvrc")
+centered = false
+
+[connection signal="pressed" from="ColorRect/ButtonAtivarRoleta" to="ColorRect" method="_on_button_ativar_roleta_pressed"]

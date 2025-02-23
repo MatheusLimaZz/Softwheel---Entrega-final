@@ -1,0 +1,170 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7qh7ge5ups15"]
+
+[ext_resource type="Script" path="res://spin_wheel.gd" id="1_6idgn"]
+[ext_resource type="Texture2D" uid="uid://chhiay8he1qmx" path="res://addons/spin_wheel_background.png" id="1_oa5dk"]
+[ext_resource type="Texture2D" uid="uid://b4h1kllvusahk" path="res://addons/spin_wheel_front_empty.png" id="2_lc6tb"]
+[ext_resource type="Texture2D" uid="uid://cw5ge5754xnjg" path="res://addons/spin_wheel_button.png" id="3_mn6ji"]
+[ext_resource type="Texture2D" uid="uid://dv2cdmera473o" path="res://addons/spin_wheel_button_ring.png" id="3_pyee7"]
+[ext_resource type="Texture2D" uid="uid://dj3xq2vcm2an3" path="res://addons/spin_wheel_button_press.png" id="4_kji33"]
+[ext_resource type="Texture2D" uid="uid://bpkguynm07cc2" path="res://addons/spin_wheel_arrow.png" id="6_qkq31"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dqts5"]
+font_size = 25
+
+[node name="spin_wheel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6idgn")
+is_spin = null
+speed = null
+power = null
+reward_position = null
+
+[node name="back" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 192.0
+offset_right = 987.0
+offset_bottom = 1092.0
+scale = Vector2(0.561928, 0.484325)
+texture = ExtResource("1_oa5dk")
+
+[node name="front" type="TextureRect" parent="back"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -1.14441e-05
+offset_right = 900.0
+offset_bottom = 900.0
+scale = Vector2(0.942362, 0.914836)
+pivot_offset = Vector2(450, 450)
+texture = ExtResource("2_lc6tb")
+
+[node name="back_button" type="TextureRect" parent="back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.701
+offset_top = -101.882
+offset_right = 99.2986
+offset_bottom = 98.1182
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pyee7")
+
+[node name="btn_spin" type="TextureButton" parent="back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.701
+offset_top = -101.882
+offset_right = 99.2986
+offset_bottom = 98.1182
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 0.84)
+pivot_offset = Vector2(100, 100)
+texture_normal = ExtResource("3_mn6ji")
+texture_pressed = ExtResource("4_kji33")
+stretch_mode = 3
+
+[node name="flecha" type="TextureRect" parent="back"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.201
+offset_top = 16.5178
+offset_right = 98.7994
+offset_bottom = 197.518
+grow_horizontal = 2
+scale = Vector2(0.652667, 0.588119)
+pivot_offset = Vector2(100, -0.0688705)
+texture = ExtResource("6_qkq31")
+
+[node name="FeedbackPopup" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 40
+label_settings = SubResource("LabelSettings_dqts5")
+
+[node name="FeedbackLabel" type="Label" parent="FeedbackPopup"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 424.0
+offset_right = 1384.0
+offset_bottom = 528.0
+
+[node name="QuestionPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 120.0
+offset_right = 1797.0
+offset_bottom = 815.0
+scale = Vector2(0.560004, 0.84)
+
+[node name="QuestionLabel" type="Label" parent="QuestionPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 1120.0
+offset_bottom = 104.0
+
+[node name="Option1" type="Button" parent="QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 128.0
+offset_right = 960.0
+offset_bottom = 216.0
+
+[node name="Option2" type="Button" parent="QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 248.0
+offset_right = 976.0
+offset_bottom = 344.0
+
+[node name="Option3" type="Button" parent="QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 376.0
+offset_right = 976.0
+offset_bottom = 480.0
+
+[node name="Option4" type="Button" parent="QuestionPanel/QuestionLabel"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 504.0
+offset_right = 976.0
+offset_bottom = 608.0
+
+[node name="SkipButton" type="Button" parent="QuestionPanel"]
+layout_mode = 0
+offset_left = -314.0
+offset_top = 629.0
+offset_right = -43.0
+offset_bottom = 695.0
+text = "skip question
+"
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 712.0
+offset_right = 1056.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+
+[connection signal="pressed" from="back/btn_spin" to="." method="_on_btn_spin_pressed"]

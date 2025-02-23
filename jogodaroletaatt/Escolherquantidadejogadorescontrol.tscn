@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://do137cb5lvwfb"]
+
+[ext_resource type="Script" path="res://color_rect_escolherquantidade.gd" id="1_3sxgs"]
+
+[sub_resource type="Theme" id="Theme_m0df6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x13sg"]
+font_size = 30
+font_color = Color(0.0923971, 0.0923971, 0.0923971, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRectEscolherquantidade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3sxgs")
+
+[node name="Button1player" type="Button" parent="ColorRectEscolherquantidade"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 131.0
+offset_right = 820.0
+offset_bottom = 206.0
+text = "1  Jogador"
+
+[node name="Button2players" type="Button" parent="ColorRectEscolherquantidade"]
+layout_mode = 0
+offset_left = 2026.0
+offset_top = 197.0
+offset_right = 2233.0
+offset_bottom = 272.0
+text = "2  Jogadores
+"
+
+[node name="Button3players" type="Button" parent="ColorRectEscolherquantidade"]
+layout_mode = 0
+offset_left = 1994.0
+offset_top = 317.0
+offset_right = 2201.0
+offset_bottom = 392.0
+text = "3  Jogadores
+"
+
+[node name="VoltarButton" type="Button" parent="ColorRectEscolherquantidade"]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 221.0
+offset_right = 821.0
+offset_bottom = 296.0
+text = "Voltar
+"
+
+[node name="Label" type="Label" parent="ColorRectEscolherquantidade"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 45.0
+offset_right = 1224.0
+offset_bottom = 129.0
+theme = SubResource("Theme_m0df6")
+text = "Escolha o modo de jogo"
+label_settings = SubResource("LabelSettings_x13sg")
+horizontal_alignment = 1
+vertical_alignment = 1
